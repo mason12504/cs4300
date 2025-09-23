@@ -9,9 +9,9 @@ import os
 # this is weird but it is the only method I tried from geeksforgeeks and it works so it'll do  
 current = os.path.dirname(os.path.realpath(__file__))
 parent = os.path.dirname(current) 
-parent = parent + "/src"
+parent = parent + "/src" 
 sys.path.append(parent)
 
 from task1 import *
-def test_task1():
+def test_task1(): 
 	assert printTask1() == "Hello World!" 
