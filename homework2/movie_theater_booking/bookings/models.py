@@ -9,8 +9,6 @@ class Movie(models.Model):
     release_date = models.DateTimeField("date published")
     duration = models.IntegerField(default=0)
 
-
-
 # Seat: seat number, booking status.
 class Seat(models.Model):
     seat_number = models.IntegerField(default=0)

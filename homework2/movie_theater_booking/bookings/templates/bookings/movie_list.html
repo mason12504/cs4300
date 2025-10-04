@@ -1,0 +1,20 @@
+{% extends "bookings/base.html" %}
+
+{% block title %} Movie List {% endblock title %}
+{% block content %} 
+<h2> Available Movies</h2>
+
+<h3> {{movie.id}} </h3>
+<h1> {{Movie.id}}</h1>
+<ul class = "list-group">
+    {% for movie in details %}
+        
+        <li class="list-group-item">
+            <h5>{{movie.id}} {{movie.title}}</h5>
+            <p>{{movie.description}}</p>
+            <p>duration: {{movie.duration}} minutes</p>
+            
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content%}

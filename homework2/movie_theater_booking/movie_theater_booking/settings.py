@@ -25,13 +25,23 @@ SECRET_KEY = 'django-insecure-@hr6ty%^=w+=47zj(ja_@)zdp!6wbjmj2y^z4x$_c91illsvuc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['editor-mason-19.devedu.io', 'app-mason-19.devedu.io']
+ALLOWED_HOSTS = ['editor-mason-19.devedu.io', 
+                 'app-mason-19.devedu.io'
+                 ]
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+    
+    # no need for user auth rn
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
+    ], 
+    # REMOVE IF GOING BACK TO API VIEW AS OF 10-3-2025
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.TemplateHTMLRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework.renderers.JSONRenderer',
+        
+        
     ]
 }
 
@@ -39,7 +49,9 @@ REST_FRAMEWORK = {
 
 INSTALLED_APPS = [
     'rest_framework',
+
     'bookings.apps.BookingsConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,7 +75,7 @@ ROOT_URLCONF = 'movie_theater_booking.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['bookings/templates/bookings'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
