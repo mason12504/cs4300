@@ -12,11 +12,11 @@ Render was not in the cards today so just run
 `python manage.py runserver 0.0.0.0:3000`  in the directory cs4300/homework2/movie_theater_booking  
 then hit "app" on devedu to view 
 
-Naviation --------------------
+Naviation --------------------  
 you can click around the html views for the normal user experience, or go to  
 https://app-mason-19.devedu.io/api for the DRF browsable api views. 
 
-Testing ----------------------
+Testing ----------------------  
 unit testing of models:  
 `python manage.py test` will run tests in tests.py that instantiate some models and verify it works as intended
 
