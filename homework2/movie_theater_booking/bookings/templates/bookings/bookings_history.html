@@ -1,0 +1,31 @@
+{% extends "bookings/base.html" %}
+
+{% block title %} Book a Seat {% endblock title %}
+{% block content %} 
+<h2> Booking History </h2>
+
+<ul class = "list-group">
+    {% for booking in bookings %}
+        
+        <li class="list-group-item">
+            <h5>Booking #{{booking.id}}</h5>
+            <p>seat {{booking.seat.seat_number}}</p>
+            <p>movie: {{booking.movie.title}}</p>
+            <p> user: {{booking.user}} </p>
+            <p>booking date: {{booking.booking_date}}</p>
+            
+        </li>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        <label>Book a movie: </label><br>
+        <input type="text" name="seat_number"><br>Seat<br>
+        <input type="text" name="movie_title"><br>Movie<br>
+        <input type="text" name="user"><br>User<br>
+        <input type="datetime" name="date"><br>Date<br>
+
+        <button type="submit">finalize booking</button>
+
+    </form>
+</ul>
+{% endblock content%}

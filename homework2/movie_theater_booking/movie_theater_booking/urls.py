@@ -27,15 +27,23 @@ from rest_framework import routers, serializers, viewsets
 
 # Routers provide an easy way of automatically determining the URL conf.
 # default router includes an API root view for the base directory
-routerHTML = routers.DefaultRouter()
-routerHTML.register(r'movies', MovieViewSet)
-routerHTML.register(r'seats', SeatViewSet)
-routerHTML.register(r'bookings', BookingViewSet)
+routerAPI = routers.DefaultRouter()
+routerAPI.register(r'movies', MovieViewSet)
+routerAPI.register(r'seats', SeatViewSet)
+routerAPI.register(r'bookings', BookingViewSet)
 
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browsable API.
+
+
+# use router for viewsets and browsableAPIView things, but using regular django stuff for the HTML 
 urlpatterns = [
-    path('', include(routerHTML.urls)),
+    path('', home_page, name='home'),
+    # this just makes the browsable API view
+    path('api/', include(routerAPI.urls), name='api'),
+
+    # particular views
+    path('main/movies/', Movie_ListView_HTML, name='movies'),
+    path('main/seat_booking/', seat_bookingView_HTML),
+    path('main/booking_history/', Booking_ViewHTML),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

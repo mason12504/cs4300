@@ -1,0 +1,21 @@
+{% extends "bookings/base.html" %}
+
+{% block title %} Book a Seat {% endblock title %}
+{% block content %} 
+<h2> Available Seats </h2>
+
+<h3> {{seat.id}} </h3>
+<h1> {{seat.id}}</h1>
+<ul class = "list-group">
+    {% for seat in seats %}
+        
+        <li class="list-group-item">
+            <h5>seat {{seat.id}}</h5>
+            <p>seat number: {{seat.seat_number}}</p>
+            <p>booking status: {{seat.booking_status}}</p>
+            
+        </li>
+    {% endfor %}
+
+</ul>
+{% endblock content%}

@@ -1,0 +1,37 @@
+{% extends "bookings/base.html" %}
+
+{% block title %} Movie Booking App {% endblock title %}
+{% block content %} 
+
+<div class="text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis">Welcome to MoviesBooking! </h1>
+    <h2 class = "display-10"> 
+        The one-stop-shop for booking movies online at a theater near you. 
+    </h2>
+    <div class = "row g-4 py-5 row-cols-1 row-cols-1g-3">
+        <div class="feature col">
+            <h2 class = "display-10">Movies </h2>
+            <p> see a list of all available movies </p>
+            <a class="link" href="{% url 'movies' %}">View Movies Now</a>
+        </div>
+        <div class="b-example-divider"></div> 
+        <div class="feature col">
+            <h2 class = "display-10">Seats </h2>
+            <p> see a list of all available seats </p>
+            <a class="link" href="https://app-mason-19.devedu.io/main/seat_booking/">View Seats Now</a>
+        </div>
+        <div class="b-example-divider"></div>
+        <div class="feature col">
+            <h2 class = "display-10">Booking History</h2>
+            <p> see a list of movie booking histories </p>
+            <a class="link" href="https://app-mason-19.devedu.io/main/booking_history/">View Bookings Now</a>
+        </div>
+    </div>
+</div>
+
+
+
+<h3> {{seat.id}} </h3>
+<h1> {{seat.id}}</h1>
+
+{% endblock content%}
