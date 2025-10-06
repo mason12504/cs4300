@@ -3,16 +3,18 @@ CS 4300
 Homework 2  
 10-6-2025  
 
-Running the program  ---------
-click the render URL
+Running the program  ---------  
+Render was not in the cards today so just run  
+`python manage.py runserver 0.0.0.0:3000`  in the directory homework2/movie_theater_booking  
+then hit "app" on devedu  
 
 Naviation --------------------
 you can click around the html views for the normal user experience, or go to
 https://app-mason-19.devedu.io/api for the api views. 
 
 
-Testing: 
-idk yet 
+Testing:  
+idk yet  
 
 Resources used:  
 I used the docs given in the homework, with some youtube videos and AI for things that weren't immediately obvious to me in the docs  
