@@ -26,7 +26,7 @@ API testing is also handled in tests.py with the command above covering that.
 Resources used:  
 I used the docs given in the homework, with some youtube videos and AI for things that weren't immediately obvious to me in the docs or things towards the end I didn't plan adequate time for. 
 AI was used for exploring concepts, and generating some significant parts of the code. The HTML is based on bootstrap examples with the form part being chatGPT. Tests in tests.py are basically all chatGPT as well with the generated code copy-pasted. The remainder of the assignment is from the resources below and my own learning.  
-ChatGPT convo link with GPT-5: https://chatgpt.com/c/68e05deb-bfe4-832a-ae18-73ac5878500b  
+ChatGPT convo link with GPT-5: https://chatgpt.com/share/68eaa1eb-4e40-8004-a951-13ffc3377323 
 https://docs.djangoproject.com/en/5.2/   
 https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/   
 https://getbootstrap.com/docs/5.3/getting-started/introduction/  
